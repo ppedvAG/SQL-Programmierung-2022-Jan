@@ -9,3 +9,12 @@
  * Normalisierung vs Redundanz
  * Seiten und Blöcke
  * Messungen
+
+ # Kompression
+
+ # Partitionierung
+ * part Sicht
+ * Dateigruppen
+ * Partitionierung
+
+ # MAXDOP
