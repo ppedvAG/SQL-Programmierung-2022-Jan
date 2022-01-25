@@ -19,7 +19,7 @@ set statistics io, time on
 --je mehr Prozessoren, desto größer der Verwaltungsaufwand
 
 select companyname , sum(unitprice*quantity) from kundeumsatz
-group by companyname option (maxdop 1)
+group by companyname option (maxdop 1) -- option (maxdop 8) obwohl die DB nur 4  vorgibt
 
 -- CPU-Zeit = 297 ms, verstrichene Zeit = 286 ms.
 

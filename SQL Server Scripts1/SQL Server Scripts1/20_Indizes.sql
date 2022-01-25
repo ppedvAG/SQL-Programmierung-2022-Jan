@@ -18,16 +18,15 @@ select * from ptab where id = 1117
 --NON Clustered Index ..nicht gr IX !
 ----------------------------------------
 --eindeutige Index ! 
---zusammengesetzter IX !
---IX mit eingeschl Spalten !
---gefilterter IX
+--zusammengesetzter IX ! max 16 Spalten od 900bytes ...where !!!
+--IX mit eingeschl Spalten !   SELECT ---> abdeckender IX
+--gefilterter IX ab Std.. lohnt nur, wenn Ebenen weniger werden als ohne Filter
 --abdeckender IX !
 --ind Sicht !
 --part Index !
 --hypoth (realer) IX
 -----------------------------------------
 --Columnstore Index (gr n gr)
-
 
 
 /*
@@ -119,15 +118,6 @@ where country = 'USA' and City = 'New York'
 
 
 
-
-
-
-
-
-
-
-
-
 --ind Sicht
 
 select country, count(*) as Anzahl
@@ -153,3 +143,106 @@ from dbo.kundeumsatz
 group by country
 
 select * from orders where orderid = 100000
+
+--Klammern setzen
+select * from kundeumsatz 
+where
+		EmployeeID=1
+		OR 
+		(Freight < 1
+		AND
+		Country = 'USA')
+
+
+	select freight , shipcity from kundeumsatz
+	where
+			country = 'UK'
+
+
+	select freight , shipcity from kundeumsatz
+	where
+			country = 'USA'
+
+--Kopie der KundeUmsatz
+	select * into ku2 from kundeumsatz
+
+	--KU2 = HEAP
+
+	select top 3 * from ku2 --abfrage AGG where 
+
+
+	--Lagerwert pro Productname
+	--Companyname  startet mit P
+	
+	--idealer IX: NIX_CN_i_PNUSUP)
+	select Productname, sum(unitsinstock*unitprice) as Summe from kundeumsatz
+	where companyname like 'P%'
+	Group by Productname
+	--315   , CPU-Zeit = 15 ms, verstrichene Zeit = 13 ms.
+
+		select Productname, sum(unitsinstock*unitprice) as Summe from ku2
+	where companyname like 'P%'
+	Group by Productname
+
+
+
+	--Cl ColStore IX CSIX
+			select Productname, sum(unitsinstock*unitprice) as Summe from ku2
+	where companyname like 'P%'
+	Group by Productname
+
+
+select Productname, sum(unitsinstock*unitprice) as Summe from ku2
+	where employeeid = 1
+	Group by Productname
+
+
+	--a stimmt     4,3 MB
+
+	--Kompression!!!!  
+	--nun Archiv Columnstore Kompression---> 3,0 MB
+
+	--
+
+
+	--
+
+	delete from ku2 where country ='USA'
+
+	update ku2 set  freight = freight *1.1 where country = 'UK' --=552960 in HEAP delta store
+
+	select * from sys.dm_db_column_store_row_group_physical_stats
+
+	delete from ku2
+
+	select * from ku2
+
+
+
+	--inner left right cross  merge nested loop hash
+	select * from customers c inner merge join orders o on c.CustomerID=o.CustomerID
+
+	select * from customers c inner  loop join orders o on c.CustomerID=o.CustomerID
+
+	select * from customers c inner hash join orders o on c.CustomerID=o.CustomerID
+
+	GO
+
+
+
+	--beste IX Strategie
+
+	--A B C  1000
+	/*
+	0 = HEAP
+	1 = CL IX
+	>1 N CL IX
+	
+
+
+
+	*/
+
+	select * from sys.dm_db_index_usage_stats
+
+

@@ -18,3 +18,13 @@
  * Partitionierung
 
  # MAXDOP
+
+ # Indizes
+ * Indexarten
+ * Fallbeispiele
+ * IX Monitoring
+ * IX Strategie entwicklen
+ * Problemfälle (Prozedur)
+
+
+ 
