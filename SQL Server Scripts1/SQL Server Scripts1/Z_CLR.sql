@@ -6,9 +6,10 @@
 --SQL CREATE ASSEMBLY
 
 
---WARUM? weil C# effektiver ist als TSQL
+--WARUM? weil C# effektiver ist als TSQL, wenn kein TSQL
 
---Security: SAFE (lokaler Datenzugriff) , UNSAFE (alles möglich),
+--Security: SAFE (lokaler Datenzugriff) , 
+				--UNSAFE (alles möglich),
 			--EXTERNAL ACCESS (lokalen Dateizugriff, Daten, Netzwerkzugriff, Registry)
 
 			exec HelloCLR 'ttxt'

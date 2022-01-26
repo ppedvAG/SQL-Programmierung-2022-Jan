@@ -55,6 +55,12 @@
           <AssociatedConnUserName />
           <FullPath>10_Salamitaktik.sql</FullPath>
         </FileNode>
+        <FileNode Name="100_Cursor.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>100_Cursor.sql</FullPath>
+        </FileNode>
         <FileNode Name="20_Indizes.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
@@ -103,29 +109,17 @@
           <AssociatedConnUserName />
           <FullPath>70_IM_Tabellen.sql</FullPath>
         </FileNode>
-        <FileNode Name="BadView.sql">
+        <FileNode Name="80_BadView.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>BadView.sql</FullPath>
+          <FullPath>80_BadView.sql</FullPath>
         </FileNode>
-        <FileNode Name="Glenn Berry DMVs.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>Glenn Berry DMVs.sql</FullPath>
-        </FileNode>
-        <FileNode Name="Index sehen.sql">
+        <FileNode Name="90_PlanWiederverwendung.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>Index sehen.sql</FullPath>
-        </FileNode>
-        <FileNode Name="PlanWiederverwendung.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>PlanWiederverwendung.sql</FullPath>
+          <FullPath>90_PlanWiederverwendung.sql</FullPath>
         </FileNode>
         <FileNode Name="ScopedDatabase_ADR_Fill1.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
@@ -145,11 +139,11 @@
           <AssociatedConnUserName />
           <FullPath>ScopedDatabase_ADR_SETUP.sql</FullPath>
         </FileNode>
-        <FileNode Name="Überflüssige Indizes.sql">
+        <FileNode Name="WindowFunction.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>Überflüssige Indizes.sql</FullPath>
+          <FullPath>WindowFunction.sql</FullPath>
         </FileNode>
         <FileNode Name="X-Recap.sql.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
@@ -162,6 +156,18 @@
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Z_CLR.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Z_Glenn Berry DMVs.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Z_Glenn Berry DMVs.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Z_Index sehen.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Z_Index sehen.sql</FullPath>
         </FileNode>
         <FileNode Name="Z_Interleave Execution.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
@@ -192,6 +198,12 @@
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Z_Tabellenvariablen.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Z_Überflüssige Indizes.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Z_Überflüssige Indizes.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
