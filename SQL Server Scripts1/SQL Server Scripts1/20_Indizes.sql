@@ -14,7 +14,7 @@ select * from ptab where id = 1117
 
 --Indexarten
 
---Clustered IX gruppierte Index !
+--Clustered IX gruppierte Index ! = Tabelle
 --NON Clustered Index ..nicht gr IX !
 ----------------------------------------
 --eindeutige Index ! 
@@ -38,7 +38,7 @@ je mehr wir Treffer (rel viel) haben, desto schlechter
 Wechsel von IX Seek zu SCAN
 rel viel ? 40% 
 
-Abfragen mit  :  = ,  ID Abfragen,  PK
+Abfragen mit  :  = ,  ID Abfragen,  PK..bei rel wenigen Ergebniszeilen
 sind günstig für den NON CL IX
 
 
