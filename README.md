@@ -1,13 +1,14 @@
 # SQL Programmierung 2022 Jan
  
+ # Im Projekt befindet sich auch die  animierte Gif f√ºr Indizes und das Whiteboard
 
  # Datenbanksettings
  * Wachstumsraten
- * Anfangsgrˆﬂen
+ * Anfangsgr√∂√üen
 
  # DB Design
  * Normalisierung vs Redundanz
- * Seiten und Blˆcke
+ * Seiten und Bl√∂cke
  * Messungen
 
  # Kompression
@@ -24,7 +25,7 @@
  * Fallbeispiele
  * IX Monitoring
  * IX Strategie entwicklen
- * Problemf‰lle (Prozedur)
+ * Problemf√§lle (Prozedur)
 
 
 
